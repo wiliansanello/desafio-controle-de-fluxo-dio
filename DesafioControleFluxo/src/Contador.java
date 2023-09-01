@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Contador {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner terminal = new Scanner(System.in);
 
         System.out.println("Contador de números inteiros entre dois números pré-determinados");
         System.out.println("Informe o número onde inicia a contagem ");
-        int primeiroParametro = sc.nextInt();
+        int primeiroParametro = terminal.nextInt();
         System.out.println("Informe o número onde a contagem finaliza");
-        int segundoParametro = sc.nextInt();
+        int segundoParametro = terminal.nextInt();
 
         try {
             int contagem = efetuarContagem(primeiroParametro, segundoParametro);
