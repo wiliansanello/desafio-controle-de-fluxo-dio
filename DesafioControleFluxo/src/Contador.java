@@ -11,12 +11,7 @@ public class Contador {
         int segundoParametro = terminal.nextInt();
 
         try {
-            int contagem = efetuarContagem(primeiroParametro, segundoParametro);
-            System.out.println("Iniciando iteração. Abaixo serão mostrados todos os números inteiros que estão entre os números informados.");
-            for(int i = 0;i < contagem; i++){
-                if (i != 0)
-                    System.out.println("Número "+ (primeiroParametro + i));
-            }            
+            efetuarContagem(primeiroParametro, segundoParametro);            
         } catch (ParametrosInvalidosException e) {
             System.out.println("O segundo número deve ser maior do que o primeiro");
         }
@@ -27,7 +22,12 @@ public class Contador {
         
         if(diferenca <= 0){
             throw new ParametrosInvalidosException();
-        } 
+        } else {
+            System.out.println("A diferença entre os números é " + diferenca + ". Iniciando contagem.");
+            for(int i = 0;i < diferenca; i++){
+                System.out.println("Número "+ i);
+            }            
+        }
 
         return diferenca;
     }
