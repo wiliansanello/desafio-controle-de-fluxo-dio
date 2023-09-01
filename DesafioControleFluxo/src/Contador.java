@@ -15,6 +15,8 @@ public class Contador {
         } catch (ParametrosInvalidosException e) {
             System.out.println("O segundo número deve ser maior do que o primeiro");
         }
+
+        terminal.close();
     }
 
     static int efetuarContagem(int primeiroNumeroInserido, int segundoNumeroInserido) throws ParametrosInvalidosException {
